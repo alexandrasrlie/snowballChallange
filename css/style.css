@@ -1,0 +1,149 @@
+body{
+    background-color: whitesmoke;
+    font-family: Arial;
+}
+.innpakning{
+    width: 100%;
+}
+.nav{
+    height: 100px;
+    padding: 40px;
+    background-color: white;
+}
+.nav img{
+    height: 100%;
+}
+.nav a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    float: right;
+    padding: 20px;
+    margin: 25px 20px 100px 0px;
+}
+.nav a:hover{
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+#active{
+    text-decoration: underline;
+}
+footer{
+    background-color: lightgray;
+    display: inline-block;
+    width: 100%;
+}
+footer .contact{
+    float: left;
+    width: 30%;
+    margin: 10px;
+}
+footer .help{
+    float: right;
+    wifth: 60%;
+    margin: 10px;
+}
+.content{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.introduction{
+    text-align: center;
+    height: 300px;
+    padding-top: 5%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    background-color: #FFEA96;
+    box-shadow: 2px 2px #80713E;
+    border-radius: 5px;
+}
+#arrow{
+    font-size: 30px;
+}
+.box1, .box2{
+    text-align: center;
+    width: 35%;
+    display: inline-block;
+    vertical-align: top;
+    height: 250px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 2%;
+    border-radius: 5px;
+    background-color: #FFEA96;
+    box-shadow: 2px 2px #80713E;
+    margin-bottom: 2%;
+}
+.info{
+    font-size: 25px;
+}
+@media screen and (max-width: 1210px){
+    .info{
+        font-size: 30px;
+    }
+    .box1, .box2{
+        display: block;
+        width: 85%;
+        font-size: 20px;
+    }
+    .nav a{
+        font-size: 25px;
+        padding: 10px;
+    }
+    .help{
+        display: block;
+        font-size: 18px;
+        float: none;
+        position: relative;
+        left: -80px;
+    }
+    .contact{
+        font-size: 25px;
+        display: block;
+    }
+}
+.order{
+    width: 75%;
+    margin: auto;
+}
+.form #companyName, .form #email, {
+    height: 20px;
+    width: 500px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.order #confirmButton{
+    padding: 10px;
+    border-radius: 5px;
+}
+.order .orderInfo{
+    background-color: #FFEA96;
+    padding: 5%;
+}
+.order .form{
+    margin: auto;
+    background-color: #EDEDED;
+    padding: 2%;
+    padding-left: 20%;
+}
+
+.about{
+    background: #ffffcc;
+    padding: 12px;
+    padding-right: 40px;
+    padding-left: 40px;
+    
+}
+
+.what{
+    background: #FFEA96;
+    padding: 15px;
+    padding-right: 40px;
+    padding-left: 40px;
+    
+}
+
+.overskrift{
+    text-align: center;
+}

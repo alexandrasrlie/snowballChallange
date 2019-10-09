@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Order</title>
+</head>
+<body>
+    <div class = "innpakning">
+        <div class="nav">
+            <img src="../images/logo.png">
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="order.html">ORDER</a>
+            <a href="description.html">DESCRIPTION</a>
+            <a href="index.html">HOME</a>
+        </div>
+        <div class="order">
+            <div class="orderInfo">
+                <h1>Would you like to order our service for your company</h1>
+                <p>In order for users to be able to use the app, your company needs to have ordered our service and register their firm and employees. Here you can easily order the service for your company, or request that your company gets our service (don't worry, if you give us some information, we'll contact them for you).</p>
+            </div>
+            <div class="form">
+                <h2>Request/order HRepoort for your company</h2>
+                <h3>Order as/from:</h3>
+                <input type="radio" name="orderAs" id="orderAs" value="employee" checked>Request from employee<br>
+                <input type="radio" name="orderAs" id="orderAs" value="company">For the company<br>
+                <br>
+
+                Company name<br>
+                <input type="text" id="companyName">
+                <br><br>
+                Write in the email adress(where can we contact your company)<br>
+                <input type="email" id="email"><br>
+                <input type="checkbox" id="noEmail">Check here if you can't cite an email
+                <br><br><br>
+                <button id="confirmButton">Confirm request</button>
+                <p id="confirmation"></p>
+            </div>
+            <script>
+                var bodyEl = document.querySelector("body");
+                var orderEl = document.querySelector(".order");
+                var orderAsEl = document.querySelector("#orderAs");
+                var companyNameEl = document.querySelector("#companyName");
+                var emailEl = document.querySelector("#email");
+                var noEmailEl = document.querySelector("#noEmail");
+                var confirmButtonEl = document.querySelector("#confirmButton");
+                var confirmationEl = document.querySelector("#confirmation");
+                
+                var result = "";
+                confirmButtonEl.addEventListener("click", receipt);
+                
+                function receipt(){
+                    confirmationEl.innerHTML = "";
+                    if(emailEl.value == "" && noEmailEl.checked == false){
+                        result = "Please write in an email or confirm that you dont have an email for the company";
+                    }else{
+                        result += "You requested our services ";
+                        if(orderAsEl.value == "employee"){
+                            result += "as an employee from ";
+                        }else{
+                            result += "on behalf of ";
+                        }
+                        result += companyNameEl.value;
+                        result += "<br>";
+                        if(noEmailEl.checked){
+                            result += "You didn't cite an email, we will still try to get in contact with your comapany";
+                        }else{
+                            result += "Email: " + emailEl.value;
+                        }
+                        result += "<br>Thank you for contacting us, we'll be in touch :)";
+                    }
+                    confirmationEl.innerHTML = result;
+                }
+            </script>
+        </div>
+        <footer>
+            <div class="contact">
+                <h3>Contact us</h3>
+                <p>Mail: contact@HRepport.com</p>
+                <p>Phone number: +47 *** ** ***</p>
+            </div>
+            <div class="help">
+                <h3>Have you ever experienced a difficult situation at work?</h3>
+                <h3>Want to talk about it?</h3>
+                <a href="https://mentalhelse.no/fa-hjelp/arbeidslivstelefonen" target="_blank">Chat it out</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
